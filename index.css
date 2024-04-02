@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --themecolor: #fd6803;
+    --black: #282b34;
+    --white : white;
+    --online: green;
+  }
+
+
+  
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+    height: 100%;
+}
+
+
+p{
+    color: var(--white);
+}
+
+
+#headerButton {
+    float: right;
+    background-color: transparent;
+    color: var(--black);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    font-size: 30px;
+
+    
+}
+
+#headerButton:hover{
+    background-color: var(--themecolor);
+    color: var(--white);
+
+    i{
+        color: var(--black);
+    }
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Ekranın tamamını kaplar */
+}
+
+#sidebar {
+    flex: 0 0 30%; /* %30'luk genişlik */
+    background-color: var(--black);
+    padding: 0px;
+    border-right: 1px solid #ccc ;
+   
+}
+
+
+#userList li {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 5px;
+    display: flex;
+    align-items: center; /* Dikey hizalama */
+}
+#userList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding: 0px 10px 0px 10px;
+}
+
+#userList li:hover {
+    background-color: var(--themecolor); /* Aktif olan userList için arka plan rengi */
+    border-radius: 0px 10px 0px 10px;
+    border: ;
+}
+
+
+i{
+    color: var(--themecolor);
+}
+
+#chatbox {
+    flex: 1; /* Kalan alanı kaplar */
+    background-color: var(--black);
+    padding: 0px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    height: 100vh; /* Ekranın tamamını kaplar */
+}
+
+#chatHeader {
+    padding: 10px;
+    background-color: ;
+    border-bottom: 1px solid #ccc;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#chatContent {
+    min-height: 0; /* En az yükseklik sıfır */
+    flex-grow: 1; /* Flex büyüme faktörü */
+    padding: 10px;
+    overflow-y: auto;
+    height: 100%; /* İçeriğin tamamını kaplar */
+}
+
+#messageContainer {
+    margin-top: auto; /* Sohbet içeriği ile en alt kısmı arasında boşluk bırakır */
+    position: fixed; /* Sayfanın altına sabitle */
+    margin-bottom: 10px; /* En altta boşluk bırakmaz */
+    bottom: 0px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    z-index: 9999; 
+}
+
+
+::-webkit-scrollbar {
+    width: 6px; /* Scrollbar genişliği */
+    background-color: ; /* Scrollbar arkaplan rengi */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--themecolor); /* Scrollbar rengi */
+    border-radius: 3px; /* Scrollbar kenar yarıçapı */
+}
+
+.avatar {
+    height: 50px; /* Yükseklik %80 */
+    width: 50px; /* Genişlik otomatik olarak ayarlanacak */
+    border-radius: 50%; /* Yuvarlak kenarlar */
+    margin-right: 10px; /* Metinden ayrılmak için sağ boşluk */
+}
+
+
+h3{
+    color: var(--white);
+    text-align: center;
+    font-weight: normal;
+}
+
+#chatHeader {
+    height: 50px;
+    display: flex;
+    align-items: center; /* Dikey hizalama */
+    text-align: center;
+    
+}
+.username {
+    margin-right: 5px; /* Kullanıcı adı ile durum metni arasında boşluk */
+    font-size: 20px;
+}
+
+.status {
+    font-size: 12px; /* Durum metni için daha küçük bir font boyutu */
+    color: var(--online); /* Durum metni rengi */
+}
+
+.message {
+    max-width: 40%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.received {
+    background-color: var(--themecolor);
+    color: var(--black);
+    align-self: flex-start;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.sent {
+    background-color: ;
+    color: var(--white);
+    align-self: flex-end;
+    align-self: flex-end; /* Gönderilen mesajların sağa yaslanması */
+    text-align: right; 
+    margin-left: 60%;
+    border: 2px solid var(--themecolor); /* Kenar rengi ve kalınlığı */
+    border-radius: 10px 10px 0px 10px;
+
+}
+
+#messageInput {
+    color: var(--white);
+    width: calc(100% - 100px); /* Gönder butonu dahil olmak üzere mesaj giriş kutusunun genişliği */
+    padding: 10px;
+    border: 2px solid  var(--white);
+    background-color: var(--black);
+    border-radius: 10px;
+    height: 30px;
+    font-family: 'Mulish', sans-serif;
+    margin-right: 0px;
+    margin-top : 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+
+.status{
+    font-size: 14px; /* Durum metni font boyutu */
+    
+    margin-top: 5px;
+}
+
+
+
+
+#sendMessageBtn {
+    width: 50px;
+    padding: 10px;
+    background-color: var(--black);
+    color: var(--themecolor);
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+#sendMessageBtn:hover {
+    
+}

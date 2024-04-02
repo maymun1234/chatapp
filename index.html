@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SignalR Sohbet Uygulaması</title>
+    <link rel="stylesheet" href="index.css"> <!-- Harici CSS dosyasını ekleyin -->
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <div id="chatHeader" style="text-align: center; color: ;">
+                Kullanıcılar<!-- Sohbet başlığı ve kişi adı -->
+            </div>
+            <h2></h2>
+            <ul id="userList">
+                <!-- Kullanıcı listesi buraya gelecek -->
+                <li style=""><img class="avatar" src="download.jpg" alt="Avatar">
+                    <span class="username">Kullanıcı 1</span>
+                    <br>
+                    <span class="status">online</span></li>
+                    <li><img class="avatar" src="download.jpg" alt="Avatar">
+                        <span class="username">Kullanıcı 2</span>
+                        <br>
+                        <span class="status"></span></li>
+                        <li><img class="avatar" src="download.jpg" alt="Avatar">
+                            <span class="username">Kullanıcı 3</span>
+                            <br>
+                            <span class="status">online</span></li>
+                <!-- Liste örnekleri -->
+            </ul>
+        </div>
+        <div id="chatbox">
+            <div id="chatHeader">
+                <img class="avatar" src="download.jpg" alt="Avatar">
+                <h3 class="username">Kullanıcı Adı</h3><br>
+                <button id="headerButton"><i class="fas fa-ellipsis-vertical" style=" color:;"></i></button>
+                <button id="headerButton" style="right: 80px;"><i class="fa-regular fa-bookmark" style=" color:;"></i></button>
+                <button id="headerButton" style="right: 150px;"><i class="fa-regular fa-bell" style=" color:;"></i></button>
+               
+               
+ 
+            </div>
+            <div id="chatContent">
+                <h3>Bugün</h3>
+                <!-- Sohbet içeriği buraya gelecek -->
+                <div class="message received">Merhaba!</div>
+                <div class="message sent">Merhaba! Nasılsın?</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message received">İyiyim, teşekkür ederim.</div>
+                <div class="message sent">Merhaba! Nasılsın?</div>
+                <div class="message sent">Merhaba! Nasılsın?</div>
+                <div class="message sent">Merhaba! Nasılsın?</div>
+                <div class="message sent">Merhaba! Nasılsın?</div>
+                
+            </div>
+            <div id="messageContainer" >
+
+                <input type="text" id="messageInput" placeholder="Mesajınızı buraya yazın...">
+            <button id="sendMessageBtn"><i class="fas fa-square-arrow-up-right" style="font-size: 45px; color:;"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js">// Tüm kullanıcı listesi öğelerini seç
+       
+        </script>
+</body>
+</html>
