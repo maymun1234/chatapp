@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>SignalR Sohbet Uygulaması</title>
+    <title>WebSocket Sohbet Uygulaması</title>
     <link rel="stylesheet" href="index.css"> <!-- Harici CSS dosyasını ekleyin -->
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.7/signalr.min.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -40,41 +43,20 @@
                 <button id="headerButton"><i class="fas fa-ellipsis-vertical" style=" color:;"></i></button>
                 <button id="headerButton" style="right: 80px;"><i class="fa-regular fa-bookmark" style=" color:;"></i></button>
                 <button id="headerButton" style="right: 150px;"><i class="fa-regular fa-bell" style=" color:;"></i></button>
-               
-               
- 
             </div>
             <div id="chatContent">
                 <h3>Bugün</h3>
                 <!-- Sohbet içeriği buraya gelecek -->
-                <div class="message received">Merhaba!</div>
-                <div class="message sent">Merhaba! Nasılsın?</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message received">İyiyim, teşekkür ederim.</div>
-                <div class="message sent">Merhaba! Nasılsın?</div>
-                <div class="message sent">Merhaba! Nasılsın?</div>
-                <div class="message sent">Merhaba! Nasılsın?</div>
-                <div class="message sent">Merhaba! Nasılsın?</div>
-                
+                <ul id="messages"></ul>
             </div>
             <div id="messageContainer" >
-
-                <input type="text" id="messageInput" placeholder="Mesajınızı buraya yazın...">
-            <button id="sendMessageBtn"><i class="fas fa-square-arrow-up-right" style="font-size: 45px; color:;"></i></button>
+                <input type="text" id="messageInput" placeholder="Mesajınızı buraya yazın..." onkeypress="handleKeyPress(event)">
+                <button id="sendMessageBtn" onclick="sendMessage()"><i class="fas fa-square-arrow-up-right" style="font-size: 45px; color:;"></i></button>
             </div>
         </div>
     </div>
-    <script src="script.js">// Tüm kullanıcı listesi öğelerini seç
-       
-        </script>
+    <script src="flask.js">
+        
+    </script>
 </body>
 </html>

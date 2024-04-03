@@ -201,7 +201,7 @@ h3{
 
 #messageInput {
     color: var(--white);
-    width: calc(100% - 100px); /* Gönder butonu dahil olmak üzere mesaj giriş kutusunun genişliği */
+    width: 90%; /* Gönder butonu dahil olmak üzere mesaj giriş kutusunun genişliği */
     padding: 10px;
     border: 2px solid  var(--white);
     background-color: var(--black);
@@ -227,9 +227,11 @@ h3{
 
 
 #sendMessageBtn {
+    position: absolute;
+    right: 4%;
     width: 50px;
     padding: 10px;
-    background-color: var(--black);
+    background-color: transparent;
     color: var(--themecolor);
     border: none;
     border-radius: 0px;
